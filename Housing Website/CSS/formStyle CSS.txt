@@ -1,0 +1,2 @@
+form {outline-color:red;}
+form.formStyle {outline-style: solid;}

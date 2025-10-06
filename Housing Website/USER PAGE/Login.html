@@ -1,0 +1,82 @@
+<DOCTYPE! html>
+<title> Login </title>
+<head>
+<link rel="stylesheet" href="../CSS/Navbar CSS.css">
+<link rel="stylesheet" href="../CSS/Hyperlinks CSS.css">
+<link rel="stylesheet" href="../CSS/Login Form CSS.css">
+<script src="../CSS/Navbar JS.js"></script>
+</head>
+<body style="background-color:PapayaWhip;">
+<div id="navbar">
+  <a href="../HOMEPAGE/Homepage.html" id="logo">CompanyLogo</a>
+  <div id="navbar-right">
+    <a href="../CONTACT US/Contact Us.html">Contact</a>
+    <a href="../ABOUT US/About Us.html">About</a>
+    <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">Submit</button>
+    <a class="active" href="../USER PAGE/User.html"">User</a>
+    </form>
+  </div>
+  </div>
+</div>
+
+<div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+<br>
+<h2 style="border: 5px solid #004d26;background-color:#00994d;"><center> Login </center> </h2>
+<br>
+
+<!--FORM PHP-->
+
+<?php
+$unameErr = $pswErr = $checkboxErr = "";
+$uname = $psw = $checkbox = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["uname"])) {
+    $fnameErr = "Username is required";
+  } else {
+    $uname = test_input($_POST["uname"]);
+   if (!preg_match("/^[a-zA-Z-' ]*$/",$fname)) {
+      $unameErr = "";
+    }
+  }
+
+  if (empty($_POST["psw"])) {
+    $pswErr = "Password is required";
+  } else {
+    $psw = test_input($_POST["psw"]);
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$psw)) {
+      $pswErr = "";
+}
+
+if (empty($_POST["checkbox"])) {
+    $checkbox = test_input($_POST["checkbox"]);
+  }
+
+?>
+
+<form action="action_page.php" method="post">
+  <div class="imgcontainer">
+    <img src="../HOMEPAGE/USER.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text1" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>

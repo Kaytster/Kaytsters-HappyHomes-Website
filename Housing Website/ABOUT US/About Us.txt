@@ -1,0 +1,62 @@
+<DOCTYPE! html>
+<title> About Us </title>
+<head>
+<link rel="stylesheet" href="../CSS/Navbar CSS.css">
+<link rel="stylesheet" href="../CSS/Hyperlinks CSS.css">
+<link rel="stylesheet" href="../CSS/Testimonials CSS.css">
+<script src="../CSS/Navbar JS.js"></script>
+</head>
+<body style="background-color:PapayaWhip;">
+
+<!--Navigation Bar HTML-->
+<div id="navbar">
+  <a href="../HOMEPAGE/Homepage.html" id="logo">CompanyLogo</a>
+  <div id="navbar-right">
+    <a href="../CONTACT US/Contact Us.html">Contact</a>
+    <a class="active" href="../ABOUT US/About Us.html">About</a>
+    <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">Submit</button>
+    <a href="../USER PAGE/User.html">User</a>
+    </form>
+  </div>
+  </div>
+</div>
+
+<div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+<br>
+<h2 style="border: 5px solid #004d26;background-color:#00994d;"><center> About Us </center> </h2>
+<br>
+<!--Table HTML-->
+<table style="width:100%">
+  <tr>
+    <th style="width:70%;border: 10px solid Coral;font-size:50px;background-color:#FFA07A;">
+DESCRIPTION<br>OF<br>COMPANY<br>
+-
+<br>
+A description of the company will be displayed here.
+</th>
+    <th style="width:70%;border: 10px solid Coral;font-size:50px;background-color:#FFA07A;">
+<a href="../CONTACT US/Contact Us.html">Contact<br>Us!</a></th>
+  </tr>
+</table>
+
+<!--Testimonials HTML-->
+<div class="header" id="myHeader">
+  <h2 style="border: 5px solid #00994d;background-color:#3CB371;"><center> Testimonials </center> </h2>
+</div>
+
+<div class="container">
+  <img src="../HOMEPAGE/User.jpg" alt="Avatar" style="width:90px">
+  <span>Person A.</span>
+  <p style="font-size:20px">This company is amazing.<br>10/10</p>
+</div>
+
+<div class="container">
+  <img src="../HOMEPAGE/User.jpg" alt="Avatar" style="width:90px">
+  <span >Person B.</span>
+  <p style="font-size:20px">This company offers great services.</p>
+</div>
+</body>
+</html>
